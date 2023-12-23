@@ -13,16 +13,20 @@
 
 >Drawing inspiration from existing University platforms like TruView and BrightSpace, TruMark looks to fill a void in a practical everyday need in the academic setting. By streamlining the attendance tracking process, TruMark seeks to enrich the academic experience at Truman State University, serving as a stepping stone on the path toward a more intuitive, technology-driven environment.
 
-In this Repo, you will find the following:
+## In this Repo, you will find the following:
 
 - Full Report explaining all the components in detail, including the machine learning model, the database, and the web application.
 
-- The web application code, which is written in Python.
+- The web application code, which is written in Python
 
-- The machine learning model code, which is written in Python.
+- The machine learning model code, which is written in Python
 
-- The database code, which is written in SQL.
+- The server-side code, which is written in PHP
 
-- The presentation slides.
+- The database code, which is written in SQL
 
+- The signature dataset used (CEDAR)
 
+- The presentation slides
+
+- and more supporting components
