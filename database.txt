@@ -1,0 +1,53 @@
+System setup:
+
+pip3 install pandas joblib scikit-learn
+
+
+
+CREATE DATABASE signature;
+USE signature;
+
+CREATE TABLE students (uid int NOT NULL AUTO_INCREMENT, username char(20) not null, password char(60) DEFAULT NULL, primary key(uid)) CHARSET=utf8;
+
+CREATE TABLE courses (
+    cid INT NOT NULL AUTO_INCREMENT,
+    course_name CHAR(100) NOT NULL,
+    course_desc TEXT NOT NULL,
+    PRIMARY KEY(cid)
+) CHARSET=utf8;
+
+CREATE TABLE course_schedule (
+    schedule_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT NOT NULL,
+    day_of_week ENUM('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    FOREIGN KEY (course_id) REFERENCES courses(cid) ON DELETE CASCADE
+) CHARSET=utf8;
+
+CREATE TABLE enrolled (uid int, cid int, PRIMARY KEY(uid, cid)) CHARSET=utf8;
+
+CREATE TABLE student_attendance (
+    attendance_id INT AUTO_INCREMENT PRIMARY KEY,
+    uid INT NOT NULL,
+    cid INT NOT NULL,
+    attendance_date DATE NOT NULL,
+    status ENUM('Present', 'Absent', 'Excused') NOT NULL DEFAULT 'Present',
+    FOREIGN KEY (uid) REFERENCES students(uid) ON DELETE CASCADE,
+    FOREIGN KEY (cid) REFERENCES courses(cid) ON DELETE CASCADE
+) CHARSET=utf8;
+
+
+
+
+INSERT INTO students (uid, username, password) VALUE(56, "cuneyt", "abc1234");
+
+INSERT INTO courses (course_name, course_desc) VALUE("CS 101: Introduction to C Programming", "CS 101: Introduction to C Programming is a foundational course that bridges the gap between theoretical computer science and practical coding skills. Designed for students with little to no programming experience, this course offers a comprehensive introduction to the C programming language, which has been a cornerstone in the field of computer science since its inception. Throughout this course, students will learn the fundamental concepts of programming using C, a language prized for its efficiency and control. This course will cover a variety of topics, including data types, operators, control flow, functions, arrays, pointers, dynamic memory allocation, and the principles of modular programming.");
+
+INSERT INTO courses (course_name, course_desc) VALUE("CS 102: Introduction to C Programming", "CS 102: Introduction to C Programming is a foundational course that bridges the gap between theoretical computer science and practical coding skills. Designed for students with little to no programming experience, this course offers a comprehensive introduction to the C programming language, which has been a cornerstone in the field of computer science since its inception. Throughout this course, students will learn the fundamental concepts of programming using C, a language prized for its efficiency and control. This course will cover a variety of topics, including data types, operators, control flow, functions, arrays, pointers, dynamic memory allocation, and the principles of modular programming.");
+
+INSERT INTO course_schedule (course_id, day_of_week, start_time, end_time) VALUES (1, 'Monday', '09:00:00', '11:00:00'), (1, 'Wednesday', '09:00:00', '11:00:00'), (1, 'Friday', '09:00:00', '11:00:00');
+INSERT INTO course_schedule (course_id, day_of_week, start_time, end_time) VALUES (2, 'Monday', '09:00:00', '23:00:00'), (2, 'Sunday', '09:00:00', '23:00:00'), (2, 'Tuesday', '09:00:00', '23:00:00'), (2, 'Wednesday', '09:00:00', '23:00:00'), (2, 'Thursday', '09:00:00', '23:00:00'), (2, 'Friday', '09:00:00', '23:00:00'), (2, 'Saturday', '09:00:00', '23:00:00');
+
+INSERT INTO enrolled (uid, cid) VALUES (56, 1) ON DUPLICATE KEY UPDATE cid = VALUES(cid);
+INSERT INTO enrolled (uid, cid) VALUES (56, 2) ON DUPLICATE KEY UPDATE cid = VALUES(cid);
