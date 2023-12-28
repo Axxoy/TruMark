@@ -30,7 +30,7 @@
 
 - The server-side code, which is written in PHP
 
-- The database code, which is written in SQL
+- The database code, which is written in MySQL
 
 - The signature dataset used (CEDAR)
 
