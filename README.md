@@ -2,8 +2,8 @@
 ## 🚀🖊 | Attendance Tracking Using Machine Learning Verification 
 
 
-![Alt Text](./main_page.png)
-*TruMark main page screenshot*
+![Alt Text](./main_page.png) 
+*TruMark main page*
 
 
 
@@ -13,11 +13,18 @@
 
 >Drawing inspiration from existing University platforms like TruView and BrightSpace, TruMark looks to fill a void in a practical everyday need in the academic setting. By streamlining the attendance tracking process, TruMark seeks to enrich the academic experience at Truman State University, serving as a stepping stone on the path toward a more intuitive, technology-driven environment.
 
+<br>
+
+![Alt Text](./login_page.png) 
+*TruMark login page*
+
+<br>
+
 ## In this Repo, you will find the following:
 
 - Full Report explaining all the components in detail, including the machine learning model, the database, and the web application.
 
-- The web application code, which is written in Python
+- The web application code, which is written in Python.
 
 - The machine learning model code, which is written in Python
 
@@ -29,4 +36,4 @@
 
 - The presentation slides
 
-- and more supporting components
+- more supporting components
