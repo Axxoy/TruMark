@@ -22,18 +22,18 @@
 
 ## In this Repo, you will find the following:
 
-- Full Report explaining all the components in detail, including the machine learning model, the database, and the web application.
+- Full Report explaining all the components in detail, including the machine learning model, the database, and the web application
 
-- The web application code, which is written in Python.
+- The web application code, which is written in Python
 
 - The machine learning model code, which is written in Python
 
 - The server-side code, which is written in PHP
 
-- The database code, which is written in MySQL
+- The database code, which is written in MySQL. I used this to populate the local database which is used by the web application via PHP. Includes commands to create the database, student and course tables, and more
 
-- The signature dataset used (CEDAR)
+- The signature dataset (CEDAR) which was used to train the machine learning model to recognize signatures.
 
-- The presentation slides
+- The presentation slides giving an overview of the project, which was presented at Truman State University as part of my capstone requirement. 
 
 - more supporting components
