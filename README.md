@@ -20,7 +20,9 @@
 
 <br>
 
-### 🔗 Video demo is available on YouTube: [https://www.youtube.com/watch?v=q5f-aAP2C4c](https://www.youtube.com/watch?v=q5f-aAP2C4c)
+
+
+### 🔗 *Video demo is available on YouTube*: [https://www.youtube.com/watch?v=q5f-aAP2C4c](https://www.youtube.com/watch?v=q5f-aAP2C4c)
 <br>
 
 ## In this Repo, you will find the following:
